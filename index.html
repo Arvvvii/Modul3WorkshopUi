@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran HIMA 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-wrapper">
+                <img src="logo-unair.png" alt="Logo UNAIR" class="logo">
+                <img src="logo-hima.png" alt="Logo HIMA" class="logo">
+            </div>
+            <h1>Pendaftaran Fungsionaris</h1>
+            <h1>HIMA D4 Teknik Informatika</h1>
+            <p>Periode Kepengurusan 2027</p>
+        </header>
+
+        <form id="himaForm">
+            <div class="input-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama sesuai KTM" required>
+            </div>
+
+            <div class="input-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" placeholder="Contoh: 1523..." required>
+            </div>
+
+            <div class="input-group">
+                <label for="pilihan">Pilihan Departemen</label>
+                <select id="pilihan" required>
+                    <option value="">-- Pilih Departemen --</option>
+                    <option value="Sekretaris">Sekretaris</option>
+                    <option value="Bendahara">Bendahara</option>
+                    <option value="PSDM">Departemen PSDM</option>
+                    <option value="Pengabdian Masyarakat">Departemen Pengabdian Masyarakat</option>
+                    <option value="Perhubungan">Departemen Perhubungan</option>
+                    <option value="Riset dan Keilmuan">Departemen Riset dan Keilmuan</option>
+                    <option value="Minat dan Bakat">Departemen Minat dan Bakat</option>
+                    <option value="Ekonomi Kreatif">Departemen Ekonomi Kreatif</option>
+                    <option value="Media dan Informasi">Departemen Media dan Informasi</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="tglWawancara">Jadwal Wawancara</label>
+                <input type="date" id="tglWawancara" min="2027-01-05" max="2027-01-10" required>
+                <small>*Wawancara tersedia 5 - 10 Januari 2027</small>
+            </div>
+
+            <button type="submit" id="btnSubmit">Kirim Formulir</button>
+        </form>
+
+        <div id="resultArea" class="hidden">
+            <div class="success-card">
+                <h3>🎉 Pendaftaran Berhasil!</h3>
+                <div id="displayData"></div>
+                <p class="note">Mohon simpan bukti pendaftaran ini untuk tahap wawancara.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
